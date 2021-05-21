@@ -20,5 +20,11 @@ if (!isNaN(port)) {
         arg: processId,
       },
     ]);
+  } else {
+    alfy.output([
+      {
+        title: `no process found for port ${port}`,
+      },
+    ]);
   }
 }

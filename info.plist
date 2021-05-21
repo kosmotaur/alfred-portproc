@@ -7,7 +7,21 @@
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>840298D5-59A7-4F41-969A-2AEF39E6F7E4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>407603A4-B537-420B-8460-FB56B889029E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Marek Stasikowski</string>
 	<key>description</key>
@@ -44,7 +58,7 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>asd</string>
+				<string>looking for process…</string>
 				<key>script</key>
 				<string>./node_modules/.bin/run-node index.js "$1"
 </string>
@@ -53,9 +67,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>asd</string>
+				<string>…then select it to kill it</string>
 				<key>title</key>
-				<string>portproc</string>
+				<string>enter port number to find the process using it</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -68,17 +82,51 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query
+
+kill -9 $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>407603A4-B537-420B-8460-FB56B889029E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>407603A4-B537-420B-8460-FB56B889029E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>475</integer>
+			<key>ypos</key>
+			<integer>175</integer>
+		</dict>
 		<key>840298D5-59A7-4F41-969A-2AEF39E6F7E4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>225</integer>
+			<integer>180</integer>
 			<key>ypos</key>
-			<integer>175</integer>
+			<integer>150</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
