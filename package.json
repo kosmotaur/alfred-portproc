@@ -1,15 +1,22 @@
 {
-  "name": "portproc",
+  "name": "alfred-portproc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Find the process listening on a given port, and kill it",
   "main": "index.js",
+  "homepage": "https://github.com/kosmotaur/alfred-portproc",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Marek Stasikowski",
+    "email": "marek.stasikowski@me.com"
+  },
   "license": "ISC",
   "dependencies": {
+    "alfred-link": "^0.3.1",
     "alfy": "^0.10.0",
     "shelljs": "^0.8.4"
   },
